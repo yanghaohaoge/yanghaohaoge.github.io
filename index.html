@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨灏 | 公路工程师</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6C63FF',
+                        secondary: '#FF6584',
+                        dark: '#272343',
+                        light: '#F9F9F9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .bg-gradient-custom {
+                background: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%);
+            }
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(45deg, #6C63FF, #FF6584);
+            }
+            .shadow-custom {
+                box-shadow: 0 4px 20px rgba(108, 99, 255, 0.2);
+            }
+        }
+    </style>
+</head>
+<body class="bg-light font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 md:px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-gradient">杨灏</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-dark hover:text-primary transition-colors">关于我</a>
+                    <a href="#skills" class="text-dark hover:text-primary transition-colors">专业技能</a>
+                    <a href="#projects" class="text-dark hover:text-primary transition-colors">项目经验</a>
+                    <a href="#contact" class="text-dark hover:text-primary transition-colors">联系方式</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-dark focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#about" class="text-dark hover:text-primary transition-colors py-2">关于我</a>
+                <a href="#skills" class="text-dark hover:text-primary transition-colors py-2">专业技能</a>
+                <a href="#projects" class="text-dark hover:text-primary transition-colors py-2">项目经验</a>
+                <a href="#contact" class="text-dark hover:text-primary transition-colors py-2">联系方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-custom text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">杨灏 | 公路工程师</h1>
+                    <p class="text-xl mb-8">工程项目管理专家 & AI独立开发者</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg">联系我</a>
+                        <a href="#projects" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all">查看项目</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/600/400?random=1" alt="杨灏" class="rounded-xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">关于我</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="https://picsum.photos/400/500?random=2" alt="杨灏照片" class="rounded-xl shadow-custom mx-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">杨灏 | 公路工程师</h3>
+                    <div class="mb-6">
+                        <p class="mb-3 text-gray-700">10年工程项目管理经验，专注于公路工程领域。</p>
+                        <p class="mb-3 text-gray-700">拥有多项专业资格证书，包括：</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                            <li>一级建造师（公路工程）</li>
+                            <li>一级造价工程师（公路工程）</li>
+                            <li>监理工程师（交通工程）</li>
+                            <li>试验检测工程师（道路工程）</li>
+                            <li>二级建造师（水利工程）</li>
+                        </ul>
+                        <p class="text-gray-700">熟练掌握CAD、同望造价、word、excel、纬地道路设计、南方cass等软件。</p>
+                        <p class="text-gray-700">同时也是AI独立开发者，致力于将人工智能技术应用于工程领域。</p>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">公路工程</span>
+                        <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">项目管理</span>
+                        <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">工程造价</span>
+                        <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">工程监理</span>
+                        <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">AI开发</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">专业技能</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-road text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">公路工程专业技术</h3>
+                    <p class="text-gray-700">精通公路工程设计、施工与管理，拥有一级建造师和监理工程师资格。</p>
+                </div>
+                
+                <!-- Skill Card 2 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-calculator text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">工程造价管理</h3>
+                    <p class="text-gray-700">持有一级造价工程师资格，熟练使用同望造价等专业软件进行工程预算和结算。</p>
+                </div>
+                
+                <!-- Skill Card 3 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-drafting-compass text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">设计软件应用</h3>
+                    <p class="text-gray-700">熟练操作CAD、纬地道路设计、南方cass等专业设计软件，能独立完成工程设计任务。</p>
+                </div>
+                
+                <!-- Skill Card 4 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tasks text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">项目管理</h3>
+                    <p class="text-gray-700">拥有10年工程项目管理经验，善于协调各方资源，确保项目高质量按期完成。</p>
+                </div>
+                
+                <!-- Skill Card 5 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-file-alt text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">办公软件应用</h3>
+                    <p class="text-gray-700">精通Word、Excel等办公软件，能高效完成各类文档和数据处理工作。</p>
+                </div>
+                
+                <!-- Skill Card 6 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">AI开发</h3>
+                    <p class="text-gray-700">作为AI独立开发者，致力于将人工智能技术应用于工程领域，提高工作效率。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">项目经验</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-custom overflow-hidden">
+                    <img src="https://picsum.photos/600/350?random=3" alt="浩哥学校站" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-dark">浩哥学校站</h3>
+                        <p class="text-gray-700 mb-4">开发了一个针对教育机构的在线平台，提供课程管理、学生管理和教学资源共享功能。</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Web开发</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">教育科技</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">AI应用</span>
+                        </div>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            查看详情 <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-custom overflow-hidden">
+                    <img src="https://picsum.photos/600/350?random=4" alt="平利县农产品信息交流分享平台" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-dark">平利县农产品信息交流分享平台</h3>
+                        <p class="text-gray-700 mb-4">为当地农产品打造的信息交流平台，帮助农民直接对接市场，提高农产品销售效率。</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">农业科技</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">电子商务</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">信息平台</span>
+                        </div>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            查看详情 <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">关注我</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Social Card 1 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-comment-dots text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">公众号/视频号</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">浩哥谈AI</p>
+                    <p class="text-gray-700">分享工程领域的AI应用经验和最新技术动态。</p>
+                </div>
+                
+                <!-- Social Card 2 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-video text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">哔哩哔哩</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        <a href="https://space.bilibili.com/" class="text-primary hover:underline">https://space.bilibili.com/</a>
+                    </p>
+                    <p class="text-gray-700">工程技术视频教程和AI应用案例分享。</p>
+                </div>
+                
+                <!-- Social Card 3 -->
+                <div class="bg-white rounded-xl shadow-custom p-6 hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-paper-plane text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">即刻</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        <a href="https://OKjk.co/GzVOHr" class="text-primary hover:underline">https://OKjk.co/GzVOHr</a>
+                    </p>
+                    <p class="text-gray-700">日常分享和技术交流。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gradient-custom text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">联系我</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/600/400?random=5" alt="联系我" class="rounded-xl shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6">与我合作</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-weixin text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm opacity-80">微信</p>
+                                    <p class="font-semibold">jingyouxi2024</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-comment-dots text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm opacity-80">公众号</p>
+                                    <p class="font-semibold">浩哥谈AI</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <p class="mb-4">如有合作需求，请添加我的微信或关注公众号联系。</p>
+                            <button class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg flex items-center">
+                                <i class="fas fa-qrcode mr-2"></i> 查看二维码
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">杨灏</h3>
+                    <p class="text-gray-400">公路工程师 & AI独立开发者</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-weixin text-xl"></i>
+                    </a>
+                    <a href="https://space.bilibili.com/" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-bilibili text-xl"></i>
+                    </a>
+                    <a href="https://OKjk.co/GzVOHr" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-paper-plane text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 杨灏. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
